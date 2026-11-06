@@ -77,8 +77,22 @@ public static int indexOfHighest(double[] prices) {
 	 }
 	 
 	return maxIndex;
-	
-	
+}
+
+
+public static int indexOfBiggestDrop (double[] prices) {
+	int largePerDrop = 1;
+	double maxPerDrop = (prices[0] - prices[1]) / prices[0];
+	for (int 0 = 0; i < prices.length; i++) {
+		double currentPerDrop = (prices[i - 1] - prices[i]) / prices[i - 1];
+		if (currentPerDrop > maxPerDrop) {
+            maxPerDrop = currentPerDrop;
+            maxDropIndex = i;
+		}
+		
+		
+	}
+	return maxDropIndex = i;
 }
 
 
@@ -86,6 +100,3 @@ public static int indexOfHighest(double[] prices) {
 
 
 
-
-
-}
